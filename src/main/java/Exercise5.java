@@ -6,7 +6,8 @@ public class Exercise5 {
         }
         int position = 0;
         // Find position of least significant 1 in bitsInCommon
-        while ((setBitsInCommon & 1) == 0) {
+        while (true) {
+            if ((setBitsInCommon & 1) != 0) break;
             setBitsInCommon >>= 1;
             position++;
         }
